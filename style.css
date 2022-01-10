@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: hsl(210, 46%, 95%);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 1rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "d"
+    "j"
+    "h"
+    "p"
+    "k";
+}
+.card {
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 33em) {
+  .container {
+    grid-template-areas:
+      "d d "
+      "j h"
+      "k k"
+      "p p";
+  }
+}
+@media (min-width: 38em) {
+  .container {
+    grid-template-areas:
+      "d d"
+      "j k"
+      "h k"
+      "p p";
+  }
+}
+@media (min-width: 54em) {
+  .container {
+    grid-template-areas:
+      "d d j"
+      "k k k "
+      "h p p";
+  }
+}
+@media (min-width: 75em) {
+  .container {
+    grid-template-areas:
+      "d d j k"
+      "h p p k ";
+  }
+}
+
+.card.daniel {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+.daniel {
+  grid-area: d;
+  color: hsl(0, 0%, 81%);
+  background: hsl(263, 55%, 52%);
+  position: relative;
+}
+
+.jonathan {
+  grid-area: j;
+  color: hsl(0, 0%, 81%);
+  background-color: hsl(217, 19%, 35%);
+}
+.jeanette {
+  grid-area: h;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.patrick {
+  grid-area: p;
+  color: hsl(0, 0%, 81%);
+  background-color: hsl(219, 29%, 14%);
+}
+.kira {
+  grid-area: k;
+  background-color: hsl(0, 0%, 100%);
+}
+header {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+header .profile-picture {
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 15px;
+}
+.daniel .profile-picture {
+  border: 2px solid hsl(263, 55%, 62%);
+}
+.patrick .profile-picture {
+  border: 2px solid hsl(263, 55%, 62%);
+}
+.quotation {
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 65px;
+  width: 100px;
+  height: 100px;
+}
+.title {
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+.subtitle {
+  font-size: 13px;
+  line-height: 1.3;
+  opacity: 70%;
+}
+.is-verified {
+  font-size: small;
+  opacity: 50%;
+}
